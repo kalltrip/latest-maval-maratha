@@ -1,0 +1,254 @@
+/* Modal Styles */
+.dish-modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1100;
+    align-items: center;
+    justify-content: center;
+}
+
+.dish-modal {
+    background-color: white;
+    width: 90%;
+    max-width: 550px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    color: #333;
+}
+
+.close-modal:hover {
+    color: #e74c3c;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.modal-header {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+#modal-dish-name {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-image-container {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#modal-dish-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-info .modal-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.modal-rating {
+    margin-bottom: 15px;
+}
+
+#modal-dish-description {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Review Button Styles */
+.review-btn {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 6px 12px;
+    font-size: 1.0rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.review-btn:hover {
+    background-color: #e68a00;
+}
+
+/* Review Modal Styles */
+.review-modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1100;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-modal {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    position: relative;
+}
+
+.close-review-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+.review-modal h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.rating-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.rating-star {
+    font-size: 24px;
+    cursor: pointer;
+    color: gray;
+}
+
+.submit-review {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-review:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .modal-body {
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .modal-image-container {
+        flex: 0 0 40%;
+        margin-bottom: 0;
+    }
+    
+    .modal-info {
+        flex: 1;
+    }
+}
+
+/* Dark Mode Compatibility */
+.dark-mode .dish-modal {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode .close-modal,
+.dark-mode .close-review-modal {
+    color: #fff;
+}
+
+.dark-mode #modal-dish-name {
+    color: #fff;
+}
+
+.dark-mode #modal-dish-description {
+    color: #ccc;
+}
+
+.dark-mode .modal-header {
+    border-bottom-color: #444;
+}
+
+.dark-mode .review-modal {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode .form-group label {
+    color: #ccc;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+    background-color: #333;
+    border-color: #555;
+    color: white;
+}
