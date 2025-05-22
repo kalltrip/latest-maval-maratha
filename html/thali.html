@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thali Menu</title>
+    <link rel="stylesheet" href="../styles.css"> <!-- External CSS -->
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Restaurant Header Section -->
+        <header class="restaurant-info">
+            <h1 class="restaurant-name"></h1>
+            <p class="restaurant-details"></p>
+        </header>
+
+        <!-- thali Menu Section -->
+        <div class="container-menu">
+            <h1>Thali Menu</h1>
+
+            <div class="main">
+                <h2>Vegetarian Thali</h2>
+                <div class="menu-section" id="thali-veg-menu"></div>
+            </div>
+
+            <div class="main">
+                <h2>Non-Vegetarian Thali</h2>
+                <div class="menu-section" id="thali-nonveg-menu"></div>
+            </div>
+
+            <!-- Back Button -->
+            <footer class="footer">
+                <a href="../index.html" class="back-btn">Back to Main Page</a>
+            </footer>
+        </div>
+    </div>
+
+ <!--------   <div id="dish-modal" class="dish-modal-container">
+  <div class="dish-modal">
+    <span class="close-modal" onclick="closeDishModal()">&times;</span>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-dish-name"></h2>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image-container">
+          <img id="modal-dish-image" />
+        </div>
+        <div class="modal-info">
+          <div class="modal-price" id="modal-dish-price"></div>
+          <div class="modal-rating" id="modal-dish-rating"></div>
+          <p id="modal-dish-description"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>---->
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("thali page loaded. Waiting for JSON...");
+
+            // Wait for JSON loading completion in menu.js
+            let checkDataLoaded = setInterval(() => {
+                if (window.menuDataLoaded) {  // Defined in menu.js after JSON load
+                    console.log("JSON Loaded. Filtering thali dishes...");
+                    filterDishes('thali-veg');
+                    filterDishes('thali-nonveg');
+                    clearInterval(checkDataLoaded);
+                }
+            }, 500);
+        });
+    </script>
+<script src="../js/thali.js"></script> <!-- Load menu.js -->
+</body>
+
+</html>

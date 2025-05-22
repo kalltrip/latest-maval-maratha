@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beverages Menu</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Restaurant Header Section -->
+        <header class="restaurant-info">
+            <h1 class="restaurant-name"></h1>
+            <p class="restaurant-details"></p>
+        </header>
+
+        <!-- Beverages Menu Section -->
+        <div class="container-menu">
+            <h1>Beverages Menu</h1>
+            <div id="beverages-menu"></div>
+
+            <!-- Back Button -->
+            <footer class="footer">
+                <a href="../index.html" class="back-btn">Back to Main Page</a>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("Beverages page loaded. Waiting for JSON...");
+
+            // Wait for JSON loading completion in menu.js
+            let checkDataLoaded = setInterval(() => {
+                if (window.menuDataLoaded) {  // Defined in menu.js after JSON load
+                    console.log("JSON Loaded. Filtering beverages data...");
+                    filterDishes('hot-beverages');
+                    filterDishes('cold-beverages');
+                    clearInterval(checkDataLoaded);
+                }
+            }, 500);
+        });
+    </script>
+    <script src="../js/beverages.js"></script>
+</body>
+
+</html>

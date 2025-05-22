@@ -1,0 +1,41 @@
+[
+    {
+        "id": "1051",
+        "name": "Veg Thali (Half)",
+        "serving": "Serves 1 adult",
+        "price": 350,
+        "rating": 4.6,
+        "description": "A wholesome vegetarian thali with 4 types of Bhaji, Dal, Papad, Rice, Chaas, Chapati, Techa, and Salad.",
+        "category": "Thali",
+        "image": "../Maval_maratha_images/181-veg-thali.jpeg",
+        "veg": true,
+        "startTime": 11,
+        "endTime": 23
+    },
+    {
+        "id": "1051",
+        "name": "Veg Thali (Full)",
+        "serving": "Serves 1-2 adults",
+        "price": 400,
+        "rating": 4.7,
+        "description": "A wholesome vegetarian thali with 4 types of Bhaji, Dal, Papad, Rice, Chaas, Chapati, Techa, and Salad.",
+        "category": "Thali",
+        "image": "../Maval_maratha_images/181-veg-thali.jpeg",
+        "veg": true,
+        "startTime": 11,
+        "endTime": 23
+    },
+    {
+        "id": "1052",
+        "name": "Jumbo Veg Thali",
+        "serving": "Serves 2-3 adults",
+        "price": 1500,
+        "rating": 4.7,
+        "description": "A grand vegetarian thali featuring Veg Gravy, Paneer Gravy / Pithla, Dal Fry, Akha Masoor, Kuchumber, Indrayani Rice, 10 Roti / 6 Bhakri, Solkadi, Techa, and Green Salad.",
+        "category": "Thali",
+        "image": "../Maval_maratha_images/182-jumbo-veg-thali.webp",
+        "veg": true,
+        "startTime": 12,
+        "endTime": 23
+    }
+]
